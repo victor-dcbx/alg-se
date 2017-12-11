@@ -19,7 +19,7 @@ export class {{name}}{{#if Impl}}Impl{{/if}} extends React.Component<void, Props
         } = this.props
 
         return (
-            <div className={classnames('pbl-{{name}}', className)}>
+            <div className={classnames('alg-{{name}}', className)}>
                 // Money making code goes here
             </div>
         )
