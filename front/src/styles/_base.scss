@@ -1,0 +1,47 @@
+// Colors
+$gray1: #4a4a4a;
+$light-gray: #9b9b9b;
+
+
+html,
+body {
+    margin: 0;
+}
+
+div {
+	font-family: CourierNewPSMT;
+    color: $gray1;
+}
+
+// Flex handlers
+.flex-display {
+    display: flex;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+@mixin courrier-bold {
+    font-family: CourierNewPS-BoldMT;
+}
+
+@mixin courrier {
+    font-family: CourierNewPS;
+}
