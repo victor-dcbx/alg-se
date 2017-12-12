@@ -7,7 +7,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="alg-App flex-display flex-align-center flex-justify-center">
+            <div className="alg-App alg-OpenSans flex-display flex-align-center flex-justify-center">
                 <Container>
                     hey
                 </Container>

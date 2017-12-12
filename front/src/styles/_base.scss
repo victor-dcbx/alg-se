@@ -12,6 +12,13 @@ $apricot: #ffab66;
 $green: #b8e986;
 $white-two: #e6e6e6;
 
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.alg-OpenSans {
+    font-family: 'Open Sans', sans-serif;
+}
+
 // Clearfix
 html,
 body {
