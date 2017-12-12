@@ -1,16 +1,22 @@
-// Colors
-$gray1: #4a4a4a;
-$light-gray: #9b9b9b;
+// Color palette
+$white: #ffffff;
+$light-gray: #e4e6e3;
+$black: #000000;
+$navy: #1c688e;
+$gray: #b3b3b3;
+$blue: #2897c5;
+$warm-gray: #9a9a9a;
+$light-black: #333333;
+$warm-gray-60: rgba(112, 112, 112, 0.6);
+$apricot: #ffab66;
+$green: #b8e986;
+$white-two: #e6e6e6;
 
 
+// Clearfix
 html,
 body {
     margin: 0;
-}
-
-div {
-	font-family: CourierNewPSMT;
-    color: $gray1;
 }
 
 // Flex handlers
