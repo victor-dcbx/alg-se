@@ -2,6 +2,7 @@
 
 import classnames from 'classnames'
 import React from 'react'
+import Infinite from 'react-infinite'
 
 import { Result } from '../results/Result.jsx'
 
@@ -19,7 +20,7 @@ export class Results extends React.Component<void, Props, State> {
 
     props: Props
     state: State = {
-        hits: null
+        hits: []
     }
 
     componentDidMount() {
@@ -28,9 +29,28 @@ export class Results extends React.Component<void, Props, State> {
     }
 
     handleResult = (res) => {
+        const { hits } = this.state
+
+        if (this.infinite) {
+            this.infinite.scrollTop = 0
+        }
         this.setState({
             hits: res.hits
         })
+    }
+
+    handleSearchOnce = (err, res) => {
+        const { hits } = this.state
+
+        this.setState({
+            hits: [...hits, ...res.hits]
+        })
+    }
+
+    handleInfiniteLoad = () => {
+        const { helper } = window
+
+        helper.nextPage().searchOnce({}, this.handleSearchOnce)
     }
 
     render() {
@@ -42,12 +62,24 @@ export class Results extends React.Component<void, Props, State> {
 
         return (
             <div className={classnames('alg-Results flex-display flex-column', className)}>
-                {hits && hits.map((hit) =>
-                    <Result
-                        hit={hit}
-                        key={hit.objectID}
-                    />
-                )}
+                <Infinite
+                    containerHeight={400}
+                    elementHeight={100}
+                    infiniteLoadBeginEdgeOffset={150}
+                    onInfiniteLoad={this.handleInfiniteLoad}
+                    ref={(infinite) => {
+                        if (infinite) {
+                            this.infinite = infinite.scrollable
+                        }
+                    }}
+                >
+                    {hits.length && hits.map((hit) =>
+                        <Result
+                            hit={hit}
+                            key={hit.objectID}
+                        />
+                    )}
+                </Infinite>
             </div>
         )
     }
