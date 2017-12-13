@@ -2,7 +2,40 @@
 
 .alg-Sidebar {
     padding-left: 23px;
+    padding-top: 28px;
     box-sizing: border-box;
     width: 200px;
     border-right: solid 1px $white-two;
+}
+
+.alg-Sidebar-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: $light-black;
+    margin-bottom: 15px;
+}
+
+.alg-Sidebar-foodType {
+    width: 158px;
+    padding: 2px 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 13px;
+
+    &:hover,
+    &.is-selected {
+        cursor: pointer;
+        background-color: $blue;
+        color: $white;
+    }
+}
+
+.alg-Sidebar-foodTypeName {
+    padding-right: 15px;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
 }

@@ -7,7 +7,11 @@ import algoliasearch from 'algoliasearch'
 import algoliasearchHelper  from 'algoliasearch-helper'
 
 window.client = algoliasearch('EMYYQC5UHI', '52d6901ea23b4d1a9b985d28e770fa6b');
-window.helper = algoliasearchHelper(window.client, 'solutions_hiring_assignment');
+window.helper = algoliasearchHelper(window.client, 'solutions_hiring_assignment', {
+    facets: [
+        'food_type',
+    ]
+});
 
 ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()
