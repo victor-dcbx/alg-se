@@ -3,6 +3,8 @@
 import classnames from 'classnames'
 import React from 'react'
 
+import { Result } from '../results/Result.jsx'
+
 import './Results.css'
 
 type Props = {
@@ -39,16 +41,12 @@ export class Results extends React.Component<void, Props, State> {
         const { hits } = this.state
 
         return (
-            <div
-                className={classnames('alg-Results', className)}
-                ref={(ref) => this.domRef = ref}
-            >
+            <div className={classnames('alg-Results flex-display flex-column', className)}>
                 {hits && hits.map((hit) =>
-                    <div
+                    <Result
+                        hit={hit}
                         key={hit.objectID}
-                    >
-                        {hit.name}
-                    </div>
+                    />
                 )}
             </div>
         )

@@ -1,7 +1,7 @@
 @import "styles/_base.scss";
 
 .alg-Searchbar {
-    height: 83px;
+    min-height: 83px;
     background-color: $navy;
     padding: 0 25px;
 }

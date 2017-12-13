@@ -1,0 +1,62 @@
+@import "styles/_base.scss";
+
+.alg-Result {
+    min-height: 100px;
+    padding: 10px 0;
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.alg-Result-img {
+   height: 80px;
+   width: 80px;
+   border-radius: 4px;
+}
+
+.alg-Result-rightBlock {
+    padding-left: 18px;
+}
+
+.alg-Result-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.alg-Result-starsCount {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: $apricot;
+}
+
+
+.alg-Result-stars {
+    margin-right: 9px;
+}
+
+.alg-Result-star {
+    height: 15px;
+    width: 15px;
+}
+
+.alg-Result-reviews {
+    margin-bottom: 10px;
+}
+
+.alg-Result-reviewsCount {
+	font-family: HelveticaNeue;
+	font-size: 14px;
+	line-height: 1.37;
+	text-align: left;
+	color: $warm-gray-60;
+}
+
+.alg-Result-description {
+	font-family: HelveticaNeue;
+	font-size: 14px;
+	line-height: 1.37;
+	text-align: left;
+	color: $warm-gray-60;
+}
