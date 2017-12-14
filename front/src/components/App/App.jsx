@@ -9,6 +9,23 @@ import './App.css'
 
 class App extends Component {
 
+    componentWillMount() {
+        const { helper } = window
+
+        // Guess location via IP by default
+        helper
+            .setQueryParameter('aroundLatLngViaIP', true)
+
+        navigator.geolocation.getCurrentPosition((res) => {
+            const { latitude, longitude } = res.coords
+
+            // Use browser location instead if provided
+            helper
+                .setQueryParameter('aroundLatLngViaIP', false)
+                .setQueryParameter('aroundLatLng', `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`)
+        })
+    }
+
     render() {
         return (
             <div
