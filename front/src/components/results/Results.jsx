@@ -35,7 +35,9 @@ export class Results extends React.Component<void, Props, State> {
             this.infinite.scrollTop = 0
         }
         this.setState({
-            hits: res.hits
+            hits: res.hits,
+            nbHits: res.nbHits,
+            processingTime: res.processingTimeMS / 1000,
         })
     }
 
@@ -43,7 +45,9 @@ export class Results extends React.Component<void, Props, State> {
         const { hits } = this.state
 
         this.setState({
-            hits: [...hits, ...res.hits]
+            hits: [...hits, ...res.hits],
+            nbHits: res.nbHits,
+            processingTime: res.processingTimeMS / 1000,
         })
     }
 
@@ -58,10 +62,18 @@ export class Results extends React.Component<void, Props, State> {
             className,
         } = this.props
 
-        const { hits } = this.state
+        const { hits, processingTime, nbHits } = this.state
 
         return (
             <div className={classnames('alg-Results flex-display flex-column', className)}>
+                <div className="alg-Results-header">
+                    {processingTime && nbHits ?
+                        <span>
+                            <span className="alg-Results-nbHits">{`${nbHits} results found`}</span>
+                            <span className="alg-Results-proccessingTime">{`in ${processingTime} seconds`}</span>
+                        </span>
+                    : null}
+                </div>
                 <Infinite
                     containerHeight={400}
                     elementHeight={100}
@@ -73,7 +85,7 @@ export class Results extends React.Component<void, Props, State> {
                         }
                     }}
                 >
-                    {hits.length && hits.map((hit) =>
+                    {hits.length > 0 && hits.map((hit) =>
                         <Result
                             hit={hit}
                             key={hit.objectID}

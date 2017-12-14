@@ -62,3 +62,20 @@
 	text-align: left;
 	color: $warm-gray-60;
 }
+
+.alg-Results-header {
+    margin-bottom: 15px;
+    min-height: 22px;
+}
+
+.alg-Results-nbHits {
+	font-size: 14px;
+	font-weight: 600;
+	color: $light-black;
+}
+
+.alg-Results-proccessingTime {
+    margin-left: 4px;
+	font-size: 12px;
+	color: $light-black;
+}
