@@ -1,3 +1,7 @@
+/*
+    run node consolidate.js in this directory
+*/
+
 const fs = require('fs')
 
 fs.readFile('./restaurants_list.json', (err, data) => {
