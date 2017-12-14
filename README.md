@@ -4,4 +4,4 @@ Please find in this repository my assignment answers for the [Solution Engineeri
 
 You can find the answers for the communication project by following [this link](https://github.com/victor-dcbx/alg-se/blob/master/resources/answers.txt).
 
-Also, feel free to test the end-result of my coding challenge at this url: www.algolia-se.herokuapp.com
+Also, feel free to test the end-result of my coding challenge at this url: https://algolia-se.herokuapp.com/
