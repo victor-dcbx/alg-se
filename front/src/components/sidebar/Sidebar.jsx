@@ -38,8 +38,18 @@ export class Sidebar extends React.Component<void, Props, void> {
         const { helper } = window
 
         helper
-            .clearRefinements()
+            .clearRefinements(facet)
             .addFacetRefinement(facet, value)
+            .search()
+
+        this.forceUpdate()
+    }
+
+    handleFilterReset(facet) {
+        const { helper } = window
+
+        helper
+            .clearRefinements(facet)
             .search()
 
         this.forceUpdate()
@@ -49,6 +59,7 @@ export class Sidebar extends React.Component<void, Props, void> {
         const { className } = this.props
         const { foodTypes } = this.state
         const { helper } = window
+        const { facetsRefinements } = helper.state
 
         return (
             <div className={classnames('alg-Sidebar', className)}>
@@ -59,11 +70,17 @@ export class Sidebar extends React.Component<void, Props, void> {
                     {foodTypes && foodTypes.map((foodType) =>
                         <div
                             key={foodType.value}
-                            onClick={() => this.handleFilterClick('food_type', foodType.value)}
+                            onClick={
+                                facetsRefinements.food_type
+                                && facetsRefinements.food_type[0] === foodType.value ?
+                                    () => this.handleFilterReset('food_type')
+                                :
+                                    () => this.handleFilterClick('food_type', foodType.value)
+                            }
                             className={classnames("alg-Sidebar-foodType flex-display", {
                                 'is-selected':
-                                    helper.state.facetsRefinements.food_type
-                                    && helper.state.facetsRefinements.food_type[0] === foodType.value
+                                    facetsRefinements.food_type
+                                    && facetsRefinements.food_type[0] === foodType.value
                             })}
                         >
                             <div
