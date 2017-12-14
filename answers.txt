@@ -16,12 +16,25 @@ Cheers, George
 
 Hi George,
 
+Welcome onboard and thanks for reaching out! Search engines aren't something trivial, happy to help.
 
+Simply put, a record represents a piece of data you want to make searchable.
+You can think of it as a book in a public library. If you have access to a large number of books,
+it's gonna be pretty challenging to find one without a trick.
 
+That's where indexing comes into play. Looking up the library catalog would point you to the right section and shelf
+and save you a great amount of time. This is what we do when you upload data to Algolia, we take care of indexing it to make search reliant and blazing fast.
 
+Regarding Custom Ranking, you can think of it as a way for you to gain more control over what records you want to see appearing on top.
+Say you're running an online bookshop and want to enable your users to filter results by number of reviews,
+setting up custom ranking for reviews_count would allow building such a feature.
 
+You can read more in-depth about custom ranking here: www.algolia.com/doc/guides/ranking/custom-ranking
+Let me know if it's still unclear or if you have any more questions, we're always happy to help.
 
+Best regards,
 
+Victor
 
 --
 
@@ -36,10 +49,9 @@ Regards, Matt
 
 [ Answer 2 ]
 
-
 Hello Matt,
 
-Thanks for getting in touch and share with us your precious feedback.
+Thanks for getting in touch and share your thoughts with us.
 I'll let my team know about it so that they can take it into consideration.
 
 Luckily, there is a trick to speed up this process:
@@ -50,19 +62,36 @@ Luckily, there is a trick to speed up this process:
 
 3. Next, simply hit either clear or delete on the top right corner.
 
-Thanks again for sharing your feedback.
+I hope this helps, thanks again for sharing your feedback.
 Please don't hesitate to reach out if you have anything to add or if we can help with anything else.
 
 Best regards,
 
 Victor
 
+--
 
+[Question 3]
 
-
-Question 3: Hi,
+Hi,
 
 I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
 
 Regards, Leo
 
+[Answer 3]
+
+Hi Leo,
+
+Thanks for reaching out, I'm glad to hear you're considering using Algolia!
+We've worked hard to make it as simple as possible for you to deliver a great search experience to your users.
+
+You can read about how to get started by following this link: algolia.com/doc/guides/getting-started/the-implementation-process
+Once you're all set, you could leverage the Algolia JS Helper (community.algolia.com/algoliasearch-helper-js) to get up and running quickly.
+
+Let me know if there is any gray area, I'll be glad to explain any concept more in depth.
+
+
+Have a great day,
+
+Victor
