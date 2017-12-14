@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.alg-OpenSans {
+  font-family: 'Open Sans', sans-serif; }
+
+html,
+body {
+  margin: 0; }
+
+.flex-display {
+  display: flex; }
+
+.flex-align-center {
+  align-items: center; }
+
+.flex-justify-center {
+  justify-content: center; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-grow {
+  flex-grow: 1; }
+
+.flex-space-between {
+  justify-content: space-between; }
+
+.alg-Result {
+  min-height: 100px;
+  padding: 10px 0; }
+  .alg-Result:first-child {
+    padding-top: 0; }
+
+.alg-Result-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 4px;
+  background-color: #e4e6e3; }
+
+.alg-Result-rightBlock {
+  padding-left: 18px; }
+
+.alg-Result-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.alg-Result-starsCount {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  color: #ffab66;
+  margin-right: 9px; }
+
+.alg-Result-stars {
+  margin-right: 9px; }
+
+.alg-Result-star {
+  height: 15px;
+  width: 15px; }
+
+.alg-Result-reviews {
+  margin-bottom: 10px; }
+
+.alg-Result-reviewsCount {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  line-height: 1.37;
+  text-align: left;
+  color: rgba(112, 112, 112, 0.6); }
+
+.alg-Result-description {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  line-height: 1.37;
+  text-align: left;
+  color: rgba(112, 112, 112, 0.6); }
+
+.alg-Results-header {
+  margin-bottom: 15px;
+  min-height: 22px; }
+
+.alg-Results-nbHits {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333; }
+
+.alg-Results-proccessingTime {
+  margin-left: 4px;
+  font-size: 12px;
+  color: #333333; }

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.alg-OpenSans {
+  font-family: 'Open Sans', sans-serif; }
+
+html,
+body {
+  margin: 0; }
+
+.flex-display {
+  display: flex; }
+
+.flex-align-center {
+  align-items: center; }
+
+.flex-justify-center {
+  justify-content: center; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-grow {
+  flex-grow: 1; }
+
+.flex-space-between {
+  justify-content: space-between; }
+
+.alg-Container {
+  background-color: #fff;
+  width: 820px;
+  height: 517px; }
